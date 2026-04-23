@@ -1,30 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Zthero | Home</title>
     <link rel="icon" type="image/x-icon" href="Thebest.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 100vh; margin: 0; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; }
-        nav { display: flex; justify-content: center; align-items: center; gap: 15px; padding: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
         
-        .btn { text-decoration: none; font-weight: bold; padding: 12px 20px; border-radius: 12px; color: white; transition: all 0.3s ease; text-transform: uppercase; font-size: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; cursor: pointer; background: #0f3460; }
-        .btn i { margin-right: 8px; }
-        .home-active { background: #e94560 !important; box-shadow: 0 0 15px rgba(233, 69, 96, 0.4); }
-        .btn:hover { transform: translateY(-3px); background: #e94560; }
-
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: white;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background: #0f3460;
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .home-active {
+            background: #e94560 !important;
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #e94560;
+        }
         /* Music Player Styling */
-        .player-controls { display: flex; gap: 10px; background: rgba(0, 0, 0, 0.3); padding: 5px 15px; border-radius: 50px; border: 1px solid #e94560; margin-left: 10px; }
-        .play-btn { color: #e94560; cursor: pointer; font-size: 1.2rem; transition: 0.3s; }
-        .play-btn:hover { transform: scale(1.2); }
-        #track-name { font-size: 0.7rem; font-weight: bold; min-width: 80px; color: #fff; text-transform: uppercase; }
-
-        .container { padding: 50px 20px; }
-        h1 { font-size: 3.5rem; background: linear-gradient(to right, #ffffff, #e94560); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
-        .card { background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 20px; max-width: 600px; margin: 40px auto; border: 1px solid rgba(255, 255, 255, 0.1); }
-        .yt-button { background: #ff0000; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.4s; font-size: 1.1rem; }
+        
+        .player-controls {
+            display: flex;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 15px;
+            border-radius: 50px;
+            border: 1px solid #e94560;
+            margin-left: 10px;
+        }
+        
+        .play-btn {
+            color: #e94560;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        #track-name {
+            font-size: 0.7rem;
+            font-weight: bold;
+            min-width: 80px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .container {
+            padding: 50px 20px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #ffffff, #e94560);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .yt-button {
+            background: #ff0000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
+
 <body>
 
     <nav>
@@ -58,10 +159,13 @@
         const trackText = document.getElementById("track-name");
 
         // Playlist Array - Add more files here!
-        const playlist = [
-            { name: "Taste", file: "Tyga - Taste (Official Video) ft. Offset.mp3" },
-            { name: "Track 2", file: "track2.mp3" } 
-        ];
+        const playlist = [{
+            name: "Taste",
+            file: "Tyga - Taste (Official Video) ft. Offset.mp3"
+        }, {
+            name: "Track 2",
+            file: "track2.mp3"
+        }];
 
         let currentTrack = 0;
 
@@ -97,4 +201,5 @@
         }
     </script>
 </body>
+
 </html>
