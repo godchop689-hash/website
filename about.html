@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zthero | About</title>
+    <link rel="icon" type="image/x-icon" href="Thebest.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .btn {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 12px;
+            color: white;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            background: #0f3460;
+        }
+        
+        .btn i {
+            margin-right: 10px;
+            transition: 0.4s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            background: #e94560;
+        }
+        
+        .btn:hover i {
+            transform: rotate(360deg);
+        }
+        /* Highlight About Page */
+        
+        .about-active {
+            background: #e94560;
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.4);
+        }
+        
+        .container {
+            padding: 50px 20px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #ffffff, #e94560);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .yt-link {
+            background: #ff0000;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        
+        .yt-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="btn"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html" class="btn about-active"><i class="fas fa-user"></i> About</a>
+        <a href="projects.html" class="btn"><i class="fas fa-code"></i> Projects</a>
+        <a href="contact.html" class="btn"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="card">
+            <i class="fas fa-user-circle fa-5x" style="color: #e94560; margin-bottom: 20px;"></i>
+            <p style="font-size: 1.2rem;">I'm a YouTuber and developer building things by hand.</p>
+            <p>I focus on gaming tutorials and coding cool web projects.</p>
+            <a href="https://www.youtube.com/@ZytheroHybridOfficialYT" class="yt-link"><i class="fab fa-youtube"></i> Zthero Hybrid</a>
+        </div>
+    </div>
+</body>
+
+</html>
